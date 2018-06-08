@@ -1,0 +1,56 @@
+@import '../qbo-variables'
+
+a.qbo-tab
+  font-size: 1.5rem
+  padding: 12px 20px
+  color: #000
+  text-decoration: none
+  white-space: nowrap
+  display: inline-block
+  &:hover
+    text-decoration: none
+  &.active
+    font-weight: 600
+  &.clickable
+    cursor: pointer
+    &:focus
+      outline: -webkit-focus-ring-color auto 5px
+
+ul.qbo-tab-bar
+  padding: 0
+  margin: 0
+  list-style: none
+  width: 100%
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  border-bottom: 2px solid #d4d7dc
+  li
+    flex: 1
+    flex-grow: 0
+
+    a.qbo-tab
+      &.active
+        position: relative
+        &:after
+          position: absolute
+          content: ''
+          bottom: -2px
+          left: 0
+          height: 4px
+          width: 100%
+          background: $qbo-theme
+
+ul.qbo-tab-list
+  padding: 0
+  margin: 0
+  list-style: none
+
+  a.qbo-tab
+    display: block
+    padding-left: 38px
+    &.active
+      border-left: 6px solid #2ca01c
+    &.clickable
+      &:hover, &.active
+        background: #eceef1

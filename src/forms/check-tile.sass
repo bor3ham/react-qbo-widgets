@@ -1,0 +1,50 @@
+@import '../qbo-variables'
+
+$tile-min-size: 170px
+$tile-max-size: 170px
+$tile-image-padding: 40px
+$tile-text-padding: 10px
+
+div.qbo-check-tileset
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  justify-content: left
+  align-items: flex-start
+  label.qbo-check-tile
+    flex: 1
+    margin: 10px
+
+label.qbo-check-tile
+  display: block
+  cursor: pointer
+  min-width: $tile-min-size
+  max-width: $tile-max-size
+  height: $tile-max-size
+  text-align: center
+  border: 2px solid #cbcfd0
+  &.checked
+    border: 2px solid $qbo-theme
+  &.disabled
+    opacity: 0.4
+
+  display: flex
+  flex-direction: column
+  box-sizing: border-box
+  user-select: none
+
+  div.image-container
+    flex-basis: ($tile-max-size / 2) - $tile-image-padding
+    background-size: contain
+    background-position: center
+    background-repeat: no-repeat
+    margin: 0 $tile-image-padding
+    margin-top: $tile-image-padding
+
+  span.label-contents
+    flex: 1
+    padding: $tile-text-padding
+    padding-top: 20px
+
+  input.qbo-check-tile-box
+    display: none

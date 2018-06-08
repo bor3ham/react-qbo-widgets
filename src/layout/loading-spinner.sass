@@ -1,0 +1,52 @@
+@import '../qbo-variables'
+
+$spinner-size: 120px
+
+@keyframes spinnerrotate
+  100%
+    transform: rotate(360deg)
+@keyframes spinnerdash
+  0%
+    stroke-dasharray: 1, 200
+    stroke-dashoffset: 0
+  50%
+    stroke-dasharray: 126, 200
+    stroke-dashoffset: 0
+  100%
+    stroke-dasharray: 126, 200
+    stroke-dashoffset: -126
+@keyframes spinnercolor
+  0%
+    stroke: $qbo-theme-hover
+  50%
+    stroke: $qbo-theme
+  100%
+    stroke: $qbo-theme
+svg.qbo-loading-spinner
+  width: $spinner-size
+  height: $spinner-size
+  overflow: hidden
+  animation: spinnerrotate 4s linear infinite
+  circle.track
+    stroke: #f4f5f8
+    stroke-width: 2px
+    border-color: #f4f5f8
+  circle.path
+    stroke-dasharray: 1, 200
+    stroke-width: 2px
+    animation: spinnerdash 4s cubic-bezier(0.15, 0, 0, 1) infinite, spinnercolor 4s linear infinite
+    stroke-linecap: round
+
+div.qbo-fullscreen-spinner
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background: rgba(255, 255, 255, 0.7)
+  svg.qbo-loading-spinner
+    position: fixed
+    top: 50%
+    left: 50%
+    margin-top: -($spinner-size / 2)
+    margin-left: -($spinner-size / 2)

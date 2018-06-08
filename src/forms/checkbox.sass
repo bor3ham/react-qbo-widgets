@@ -1,0 +1,66 @@
+@import '../qbo-variables'
+
+$checkbox-size: 20px
+
+label.qbo-checkbox
+  display: block
+  text-align: left
+  margin: 15px 10px
+  > input[type="checkbox"]
+    -webkit-appearance: none
+    -moz-appearance: none
+    -ms-appearance: none
+    appearance: none
+    -webkit-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+
+    height: $checkbox-size
+    width: $checkbox-size
+    border: 1px solid #8d9096
+    background: #fff
+    border-radius: 2px
+    vertical-align: middle
+    padding: 0
+    &:before
+      font-family: harmonyicons
+      text-align: center
+      font-size: 12px
+      line-height: $checkbox-size
+      display: block
+      color: $qbo-theme
+      white-space: nowrap
+      box-sizing: border-box
+      color: #d4d7dc
+    &:checked:before
+      content: "\F01A"
+      color: $qbo-theme
+  &.disabled
+    > input[type="checkbox"]
+      background: #eee
+      &:before
+        color: #666
+  &.inline
+    > input[type="checkbox"]
+      margin: -5px 3px auto -2px
+    div.children
+      display: inline
+  &.not-inline
+    display: flex
+    flex-direction: row
+    > input[type="checkbox"]
+      flex-basis: $checkbox-size
+      margin-right: 10px
+    div.children
+      flex: 1
+  &.toggleable
+    > input[type="checkbox"]
+      &:not(:disabled)
+        cursor: pointer
+      &:hover
+        box-shadow: 0 0 6px #4b9a18 inset
+        &:before
+          content: "\F01A"
+    &:not(.disabled)
+      cursor: pointer

@@ -1,0 +1,31 @@
+@import '../qbo-variables'
+
+button.qbo-button
+  &.primary
+    color: #fff
+    background: $qbo-theme
+    border: 1px solid $qbo-theme
+    &:not(:disabled)
+      &:hover, &:active
+        background: #108000
+  &.secondary
+    background: none
+    border: 1px solid #8d9096
+  &:focus
+    box-shadow: inset 0 0 0 1px transparent, 0 0 0 3px #dcdcdc
+  border-radius: 3px
+  min-width: 80px
+  &:not(:disabled)
+    cursor: pointer
+  font-size: 1.4rem
+  height: 34px
+  line-height: 34px
+  margin: 0
+  box-sizing: border-box
+  user-select: none
+  white-space: nowrap
+  padding: 0 20px
+  font-family: $normal-font-families
+  font-weight: 600
+  &:disabled
+    opacity: 0.4
