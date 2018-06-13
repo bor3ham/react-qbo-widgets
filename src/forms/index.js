@@ -4,6 +4,7 @@ import Checkbox from './checkbox.js'
 import Text from './text.js'
 import Select from './select.js'
 import AsyncSelect from './async-select.js'
+import VirtualisedSelect from './virtualised-select.js'
 import Toggle from './toggle.js'
 import Currency from './currency.js'
 import NumberInput from './number-input.js'
@@ -18,6 +19,7 @@ export {
   Text,
   Select,
   AsyncSelect,
+  VirtualisedSelect,
   Toggle,
   Currency,
   NumberInput,
