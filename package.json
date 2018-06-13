@@ -1,6 +1,6 @@
 {
   "name": "react-qbo-widgets",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Simple widget library with minimal dependencies to match QBO's theme ",
   "main": "index.js",
   "scripts": {
