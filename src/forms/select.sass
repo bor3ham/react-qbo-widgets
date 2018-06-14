@@ -33,14 +33,20 @@ div.qbo-select
       border: 1px solid #babec5
       border-radius: 2px
       margin-top: 5px
-    div.Select-option
+      background: #fff
+    div.Select-option, div.VirtualizedSelectOption
       background: #fff
       font-size: 14px
       color: #393a3d
       padding: 8px 14px 7px
       font-weight: 400
       &.is-selected
-      &.is-focused
+      &.is-focused, &.VirtualizedSelectFocusedOption
         font-weight: 500
         background: #eaeaea
         color: $qbo-theme-hover
+    div.VirtualizedSelectOption
+      cursor: pointer
+      text-overflow: ellipsis
+      overflow: hidden
+      white-space: nowrap
