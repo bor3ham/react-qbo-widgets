@@ -1900,9 +1900,9 @@ randomatic@^3.0.0:
     kind-of "^6.0.0"
     math-random "^1.0.1"
 
-react-day-input@^1.0.19:
-  version "1.0.19"
-  resolved "https://registry.yarnpkg.com/react-day-input/-/react-day-input-1.0.19.tgz#0de51c361e963e4238151a61478e676ea878fb98"
+react-day-input@^1.0.20:
+  version "1.0.20"
+  resolved "https://registry.yarnpkg.com/react-day-input/-/react-day-input-1.0.20.tgz#37a9acd950b5627f2569f51fb0d5777e951782c3"
   dependencies:
     classnames "^2.2.5"
     moment "^2.15.0"

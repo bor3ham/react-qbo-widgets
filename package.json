@@ -9,7 +9,7 @@
     "build-js": "rollup -c",
     "build-css": "./node_modules/node-sass/bin/node-sass src/react-qbo-widgets.sass dist/react-qbo-widgets.css",
     "build": "npm run build-js; npm run build-css",
-    "collect-sass": "mkdir -p dist; rm dist/**/*.sass; cd src; cp --parents ./**/*.sass ../dist; cd ..",
+    "collect-sass": "cp -f src/qbo-variables.sass dist",
     "prepare": "npm run build; npm run collect-sass"
   },
   "files": [
