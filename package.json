@@ -9,7 +9,7 @@
     "build-js": "rollup -c",
     "build-css": "./node_modules/node-sass/bin/node-sass src/react-qbo-widgets.sass dist/react-qbo-widgets.css",
     "build": "npm run build-js; npm run build-css",
-    "collect-sass": "mkdir -p dist; cd src; cp --parents ./**.sass ../dist; cd ..",
+    "collect-sass": "mkdir -p dist; rm dist/**/*.sass; cd src; cp --parents ./**/*.sass ../dist; cd ..",
     "prepare": "npm run build; npm run collect-sass"
   },
   "files": [
@@ -37,7 +37,7 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "moment": "^2.22.1",
-    "react-day-input": "^1.0.19",
+    "react-day-input": "^1.0.20",
     "react-select": "^1.2.1",
     "react-virtualized-select": "^3.1.3"
   },
