@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 
-import { Button } from '.'
+import Button from './button.js'
 
 class ChoiceIncrementer extends React.Component {
   render() {

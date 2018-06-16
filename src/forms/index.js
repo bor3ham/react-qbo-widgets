@@ -10,6 +10,7 @@ import Currency from './currency.js'
 import NumberInput from './number-input.js'
 import ButtonChoice from './button-choice.js'
 import ChoiceIncrementer from './choice-incrementer.js'
+import DayInput from './day-input.js'
 
 export {
   Button,
@@ -25,4 +26,5 @@ export {
   NumberInput,
   ButtonChoice,
   ChoiceIncrementer,
+  DayInput,
 }

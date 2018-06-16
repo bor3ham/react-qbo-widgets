@@ -1,0 +1,45 @@
+@import '../../node_modules/react-day-input/dist/react-day-input.sass'
+@import '../qbo-variables'
+
+div.qbo-day-input
+  display: inline-block
+
+  div.rendered-react-day-input-calendar
+    width: 26rem
+    height: 23rem
+    font-size: 1rem
+    font-family: $normal-font-families
+    border: 1px solid #ddd
+    padding: 0.5rem
+
+    div.header
+      color: #333
+      background: none
+      flex-basis: 4rem
+    div.day-labels
+      color: #333
+      background: none
+      position: relative
+      border-bottom: 1px solid #fff
+      font-weight: bold
+      &:after
+        content: ' '
+        position: absolute
+        left: 2.5%
+        top: 0
+        width: 95%
+        height: 100%
+        border-bottom: 1px solid #999
+    $selected-size: 2rem
+    div.day
+      &.selected:before
+        margin-left: -($selected-size / 2)
+        width: $selected-size
+        height: $selected-size
+        background: $qbo-theme
+        border-radius: 50%
+      &:not(.in-month)
+        background: none
+        opacity: 0.4
+      &:hover
+        background: #ddd

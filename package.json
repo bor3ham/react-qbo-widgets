@@ -2,14 +2,19 @@
   "name": "react-qbo-widgets",
   "version": "1.0.6",
   "description": "Simple widget library with minimal dependencies to match QBO's theme ",
-  "main": "index.js",
+  "main": "dist/react-qbo-widgets.cjs.js",
+  "module": "dist/react-qbo-widgets.esm.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-js": "./node_modules/webpack/bin/webpack.js",
+    "build-js": "rollup -c",
     "build-css": "./node_modules/node-sass/bin/node-sass src/react-qbo-widgets.sass dist/react-qbo-widgets.css",
     "build": "npm run build-js; npm run build-css",
-    "prepare": "cp src/qbo-variables.sass dist; npm run build"
+    "collect-sass": "mkdir -p dist; cd src; cp --parents ./**.sass ../dist; cd ..",
+    "prepare": "npm run build; npm run collect-sass"
   },
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bor3ham/react-qbo-widgets.git"
@@ -32,26 +37,27 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "moment": "^2.22.1",
-    "react": "^15.4",
-    "react-dom": "^15.4",
+    "react-day-input": "^1.0.19",
     "react-select": "^1.2.1",
     "react-virtualized-select": "^3.1.3"
   },
   "peerDependencies": {
-    "react": "0.14.x || 15.x",
-    "react-dom": "0.14.x || 15.x"
+    "prop-types": "^15.0.0 || ^16.0.0",
+    "react": "^15.0.0 || ^16.0.0",
+    "react-dom": "^15.0.0 || ^16.0.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.4",
-    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "node-sass": "^4.9.0",
-    "webpack": "^4.8.3",
-    "webpack-cli": "^2.1.3",
-    "webpack-node-externals": "^1.7.2"
+    "rollup": "^0.60.7",
+    "rollup-plugin-babel": "^3.0.4",
+    "rollup-plugin-commonjs": "^9.1.3",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-peer-deps-external": "^2.1.1"
   }
 }

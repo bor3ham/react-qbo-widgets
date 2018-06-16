@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Button } from '.'
+import Button from './button.js'
 
 class ChoiceButton extends React.Component {
   handleClick = () => {
