@@ -1,10 +1,13 @@
 import React from 'react'
+import classNames from 'classnames'
 
 class LoadingSpinner extends React.Component {
   render() {
     return (
       <svg
-        className="qbo-loading-spinner"
+        className={classNames('qbo-loading-spinner', {
+          inline: this.props.inline,
+        })}
         viewBox="25 25 50 50"
       >
         <circle
@@ -28,6 +31,9 @@ class LoadingSpinner extends React.Component {
       </svg>
     )
   }
+}
+LoadingSpinner.defaultProps = {
+  inline: false,
 }
 
 class FullscreenLoadingSpinner extends React.Component {
