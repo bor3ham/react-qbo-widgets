@@ -1,3 +1,4 @@
+$button-size: 2.4rem
 div.qbo-choice-incrementer
   min-width: 250px
   display: flex
@@ -12,9 +13,13 @@ div.qbo-choice-incrementer
     min-width: 0
     text-align: center
     font-weight: bold
-  > button
-    flex-basis: 34px
+  > button.qbo-button.secondary
+    flex-basis: $button-size
     padding: 0
     min-width: 0
     font-weight: bold
+    font-size: 1.5rem
+    height: $button-size
+    line-height: $button-size
+    background: #fff
 

@@ -40,7 +40,7 @@ class ChoiceIncrementer extends React.Component {
             this.props.onChange(prevChoice ? prevChoice.value : null)
           }}
           disabled={prevChoice === null || this.props.disabled}
-        >−</Button>
+        ><i className="fal fa-minus"></i></Button>
         <div className="value-label">{renderedCurrentChoice}</div>
         <Button
           styleType="secondary"
@@ -48,7 +48,7 @@ class ChoiceIncrementer extends React.Component {
             this.props.onChange(nextChoice ? nextChoice.value : null)
           }}
           disabled={nextChoice === null || this.props.disabled}
-        >+</Button>
+        ><i className="fal fa-plus"></i></Button>
       </div>
     )
   }
