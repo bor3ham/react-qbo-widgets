@@ -1,0 +1,27 @@
+@import '../qbo-variables'
+
+textarea.qbo-textarea
+  display: block
+  width: 100%
+  max-width: 400px
+  resize: none
+  line-height: 1.4em
+  padding-top: 9px
+  padding-bottom: 9px
+  padding-left: 10px
+  padding-right: 10px
+  border-radius: 2px
+  border: 1px solid #babec5
+  outline: 0
+  font-size: 14px
+  font-weight: 400
+  font-family: $normal-font-families
+  box-sizing: border-box
+  &:disabled
+    background: #eee
+    color: #666
+  &:hover:not(:disabled)
+    box-shadow: 0 0 0 2px #d4d7dc
+    border-color: #8d9096
+  &:focus
+    border-color: $qbo-theme
