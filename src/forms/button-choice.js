@@ -11,6 +11,7 @@ class ChoiceButton extends React.Component {
       <Button
         styleType={this.props.active ? 'primary' : 'secondary'}
         onClick={this.handleClick}
+        disabled={this.props.disabled}
       >
         {this.props.label}
       </Button>
@@ -20,7 +21,7 @@ class ChoiceButton extends React.Component {
 
 class ButtonChoice extends React.Component {
   handleChoiceClick = (value) => {
-    if (typeof this.props.onChange === 'function') {
+    if (!this.props.disabled && typeof this.props.onChange === 'function') {
       this.props.onChange(value)
     }
   }
@@ -33,6 +34,7 @@ class ButtonChoice extends React.Component {
         value={option.value}
         active={option.value === this.props.value}
         onClick={this.handleChoiceClick}
+        disabled={this.props.disabled}
       />)
       if (optionIndex < this.props.options.length - 1) {
         choices.push(' ')
