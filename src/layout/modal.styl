@@ -1,6 +1,4 @@
-@import '../qbo-variables'
-
-$modal-transition-time: 0.25s
+modal-transition-time = 0.25s
 
 @keyframes fade-in-modal
   0%
@@ -17,7 +15,7 @@ $modal-transition-time: 0.25s
     background-opacity: 0.5
 
 div.qbo-modal-backdrop
-  animation: fade-in-modal-backdrop $modal-transition-time
+  animation: fade-in-modal-backdrop modal-transition-time
   background: rgba(0, 0, 0, 0.5)
   position: fixed
   left: 0
@@ -36,7 +34,7 @@ div.qbo-modal-container
   box-sizing: border-box
 
 div.qbo-modal
-  animation: fade-in-modal $modal-transition-time
+  animation: fade-in-modal modal-transition-time
   position: relative
   background: #f4f5f8
   display: flex

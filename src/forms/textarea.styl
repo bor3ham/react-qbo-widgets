@@ -1,10 +1,11 @@
-@import '../qbo-variables'
-
-input.qbo-text
+textarea.qbo-textarea
   display: block
   width: 100%
   max-width: 400px
-  height: 40px
+  resize: none
+  line-height: 1.4em
+  padding-top: 9px
+  padding-bottom: 9px
   padding-left: 10px
   padding-right: 10px
   border-radius: 2px
@@ -12,7 +13,7 @@ input.qbo-text
   outline: 0
   font-size: 14px
   font-weight: 400
-  font-family: $normal-font-families
+  font-family: normal-font-families
   box-sizing: border-box
   &:disabled
     background: #eee
@@ -21,4 +22,4 @@ input.qbo-text
     box-shadow: 0 0 0 2px #d4d7dc
     border-color: #8d9096
   &:focus
-    border-color: $qbo-theme
+    border-color: qbo-theme

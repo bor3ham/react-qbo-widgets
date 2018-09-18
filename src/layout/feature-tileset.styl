@@ -1,6 +1,5 @@
-@import '../qbo-variables'
+tile-margins = 20px
 
-$tile-margins: 20px
 div.qbo-feature-tile
   align-items: center
   display: flex
@@ -8,7 +7,7 @@ div.qbo-feature-tile
 
   div.qbo-feature-tile-icon
     height: 120px
-    margin-bottom: $tile-margins
+    margin-bottom: tile-margins
     img
       max-width: 100%
       max-height: 100%
@@ -18,7 +17,7 @@ div.qbo-feature-tile
     min-width: 0
     h3
       font-weight: 500
-      font-family: $normal-font-families
+      font-family: normal-font-families
       margin-bottom: 5px
 
 div.qbo-feature-tileset
@@ -26,16 +25,16 @@ div.qbo-feature-tileset
   display: flex
   flex-direction: row
   flex-wrap: wrap
-  margin: 0 (-$tile-margins)
+  margin: 0 (-tile-margins)
   div.qbo-feature-tile
     text-align: left
     flex: 1
     min-width: 280px
-    margin: $tile-margins
+    margin: tile-margins
     display: flex
     flex-direction: row
     div.qbo-feature-tile-icon
-      margin-right: $tile-margins
+      margin-right: tile-margins
       margin-bottom: 0
       height: auto
       flex-basis: 50px

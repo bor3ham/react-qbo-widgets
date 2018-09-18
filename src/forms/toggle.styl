@@ -1,0 +1,35 @@
+toggle-speed = 0.25s
+toggle-size = 20px
+toggle-margin = 2px
+toggle-track-length = (toggle-size * 1.8)
+
+label.qbo-toggle
+  input.toggle-check
+    display: none
+
+  div.toggle
+    background: #d4d7dc
+    transition: background toggle-speed
+    border-radius: (toggle-size / 2)
+    width: toggle-track-length
+    height: toggle-size
+    position: relative
+    &:after
+      content: ''
+      position: absolute
+      width: toggle-size - (toggle-margin * 2)
+      height: toggle-size - (toggle-margin * 2)
+      left: toggle-margin
+      background: #fff
+      top: toggle-margin
+      border-radius: 50%
+      transition: left toggle-speed
+  &.checked
+    div.toggle
+      background: qbo-theme
+      &:after
+        left: toggle-track-length - toggle-size + toggle-margin
+  &.disabled
+    opacity: 0.4
+  &:not(.disabled)
+    cursor: pointer
