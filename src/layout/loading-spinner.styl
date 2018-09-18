@@ -1,6 +1,6 @@
-@import '../qbo-variables'
 
-$spinner-size: 120px
+
+spinner-size = 120px
 
 @keyframes spinnerrotate
   100%
@@ -17,14 +17,14 @@ $spinner-size: 120px
     stroke-dashoffset: -126
 @keyframes spinnercolor
   0%
-    stroke: $qbo-theme-hover
+    stroke: qbo-theme-hover
   50%
-    stroke: $qbo-theme
+    stroke: qbo-theme
   100%
-    stroke: $qbo-theme
+    stroke: qbo-theme
 svg.qbo-loading-spinner
-  width: $spinner-size
-  height: $spinner-size
+  width: spinner-size
+  height: spinner-size
   overflow: hidden
   animation: spinnerrotate 4s linear infinite
   &.inline
@@ -53,5 +53,5 @@ div.qbo-fullscreen-spinner
     position: fixed
     top: 50%
     left: 50%
-    margin-top: -($spinner-size / 2)
-    margin-left: -($spinner-size / 2)
+    margin-top: -(spinner-size / 2)
+    margin-left: -(spinner-size / 2)

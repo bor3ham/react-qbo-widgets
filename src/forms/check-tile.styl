@@ -1,9 +1,7 @@
-@import '../qbo-variables'
-
-$tile-min-size: 170px
-$tile-max-size: 170px
-$tile-image-padding: 40px
-$tile-text-padding: 10px
+tile-min-size = 170px
+tile-max-size = 170px
+tile-image-padding = 40px
+tile-text-padding = 10px
 
 div.qbo-check-tileset
   display: flex
@@ -18,13 +16,13 @@ div.qbo-check-tileset
 label.qbo-check-tile
   display: block
   cursor: pointer
-  min-width: $tile-min-size
-  max-width: $tile-max-size
-  height: $tile-max-size
+  min-width: tile-min-size
+  max-width: tile-max-size
+  height: tile-max-size
   text-align: center
   border: 2px solid #cbcfd0
   &.checked
-    border: 2px solid $qbo-theme
+    border: 2px solid qbo-theme
   &.disabled
     opacity: 0.4
   background: #fff
@@ -35,16 +33,16 @@ label.qbo-check-tile
   user-select: none
 
   div.image-container
-    flex-basis: ($tile-max-size / 2) - $tile-image-padding
+    flex-basis: (tile-max-size / 2) - tile-image-padding
     background-size: contain
     background-position: center
     background-repeat: no-repeat
-    margin: 0 $tile-image-padding
-    margin-top: $tile-image-padding
+    margin: 0 tile-image-padding
+    margin-top: tile-image-padding
 
   span.label-contents
     flex: 1
-    padding: $tile-text-padding
+    padding: tile-text-padding
     padding-top: 20px
 
   input.qbo-check-tile-box

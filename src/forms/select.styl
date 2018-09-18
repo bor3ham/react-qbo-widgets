@@ -1,5 +1,3 @@
-@import '../qbo-variables'
-@import '../../node_modules/react-select/dist/react-select'
 
 div.qbo-select
   div.Select
@@ -24,7 +22,7 @@ div.qbo-select
           border-color: #8d9096
     &.is-focused, &.is-pseudo-focused
       div.Select-control
-        border-color: $qbo-theme
+        border-color: qbo-theme
         box-shadow: none
     div.Select-menu-outer
       border: none
@@ -44,7 +42,7 @@ div.qbo-select
       &.is-focused, &.VirtualizedSelectFocusedOption
         font-weight: 500
         background: #eaeaea
-        color: $qbo-theme-hover
+        color: qbo-theme-hover
     div.VirtualizedSelectOption
       cursor: pointer
       text-overflow: ellipsis

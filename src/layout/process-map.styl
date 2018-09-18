@@ -1,12 +1,11 @@
-@import '../qbo-variables'
+item-width = 200px
+circle-size = 2.8rem
+top-padding = 20px
 
-$item-width: 200px
-$circle-size: 2.8rem
-$top-padding: 20px
 div.qbo-process-map
-  padding-top: $top-padding
+  padding-top: top-padding
   padding-bottom: 40px
-  font-family: $normal-font-families
+  font-family: normal-font-families
 
   div.summary
     color: #666
@@ -15,7 +14,7 @@ div.qbo-process-map
 
   div.children
     display: flex
-    padding: 0 ($item-width / 2)
+    padding: 0 (item-width / 2)
     width: 100%
     justify-content: space-between
     box-sizing: border-box
@@ -29,22 +28,22 @@ div.qbo-process-map
       content: ''
       position: absolute
       top: 0
-      margin-top: $top-padding
-      margin-left: ($circle-size / 2)
-      margin-right: ($circle-size / 2)
-      left: ($item-width / 2)
-      right: ($item-width / 2)
-      height: ($circle-size / 2)
+      margin-top: top-padding
+      margin-left: (circle-size / 2)
+      margin-right: (circle-size / 2)
+      left: (item-width / 2)
+      right: (item-width / 2)
+      height: (circle-size / 2)
       border-bottom: 2px solid #ddd
 
     div.qbo-process-item
-      flex-basis: $circle-size
-      height: $circle-size
+      flex-basis: circle-size
+      height: circle-size
       text-align: center
       padding: 5px
       border: 2px solid #dcdcdc
       &.active
-        border: 2px solid $qbo-theme
+        border: 2px solid qbo-theme
       border-radius: 50%
       position: relative
       box-sizing: border-box
@@ -58,7 +57,7 @@ div.qbo-process-map
         border-radius: 50%
         margin-top: -1px
       &.active
-        background: $qbo-theme
+        background: qbo-theme
         span.number
           color: #fff
         span.title
@@ -92,4 +91,4 @@ div.qbo-process-map
         display: none
       border-bottom: 2px solid #ddd
       &.previous, &.active
-        border-bottom: 4px solid $qbo-theme
+        border-bottom: 4px solid qbo-theme

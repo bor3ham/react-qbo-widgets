@@ -1,7 +1,8 @@
 @import 'qbo-variables'
 
-@import 'node_modules/react-day-input/dist/react-day-input.sass'
-@import 'node_modules/react-select/dist/react-select'
+@import 'node_modules/react-day-input/dist/react-day-input.css'
+@import 'node_modules/react-select/dist/react-select.css'
+@import 'node_modules/react-virtualized-select/styles.css'
 
 div.qbo-styled-section
   font-size: 1.4rem
@@ -56,7 +57,7 @@ div.qbo-styled-section
     &.accent
       border-top: 4px solid #fff
     &.accent.primary
-      border-top-color: $qbo-theme
+      border-top-color: qbo-theme
 
   div.qbo-page-message
     padding: 15px 15px 11px
@@ -85,7 +86,7 @@ div.qbo-styled-section
 
 .qbo-text
   &.primary
-    color: $qbo-theme
+    color: qbo-theme
 
 @import 'dom/index'
 @import 'forms/index'

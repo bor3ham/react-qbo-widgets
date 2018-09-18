@@ -1,6 +1,4 @@
-@import '../qbo-variables'
-
-$checkbox-size: 20px
+checkbox-size = 20px
 
 label.qbo-checkbox
   display: block
@@ -16,8 +14,8 @@ label.qbo-checkbox
     -ms-user-select: none
     user-select: none
 
-    height: $checkbox-size
-    width: $checkbox-size
+    height: checkbox-size
+    width: checkbox-size
     border: 1px solid #8d9096
     background: #fff
     border-radius: 2px
@@ -27,15 +25,15 @@ label.qbo-checkbox
       font-family: harmonyicons
       text-align: center
       font-size: 12px
-      line-height: $checkbox-size
+      line-height: checkbox-size
       display: block
-      color: $qbo-theme
+      color: qbo-theme
       white-space: nowrap
       box-sizing: border-box
       color: #d4d7dc
     &:checked:before
       content: "\F01A"
-      color: $qbo-theme
+      color: qbo-theme
   &.disabled
     > input[type="checkbox"]
       background: #eee
@@ -50,7 +48,7 @@ label.qbo-checkbox
     display: flex
     flex-direction: row
     > input[type="checkbox"]
-      flex-basis: $checkbox-size
+      flex-basis: checkbox-size
       margin-right: 10px
     div.children
       flex: 1

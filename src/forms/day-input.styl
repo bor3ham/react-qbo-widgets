@@ -1,6 +1,3 @@
-@import '../../node_modules/react-day-input/dist/react-day-input.sass'
-@import '../qbo-variables'
-
 div.qbo-day-input
   display: inline-block
 
@@ -30,13 +27,13 @@ div.qbo-day-input
         width: 95%
         height: 100%
         border-bottom: 1px solid #999
-    $selected-size: 2rem
+    selected-size = 2rem
     div.day
       &.selected:before
-        margin-left: -($selected-size / 2)
-        width: $selected-size
-        height: $selected-size
-        background: $qbo-theme
+        margin-left: -(selected-size / 2)
+        width: selected-size
+        height: selected-size
+        background: qbo-theme
         border-radius: 50%
       &:not(.in-month)
         background: none
